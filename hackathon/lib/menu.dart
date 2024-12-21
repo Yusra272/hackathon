@@ -91,159 +91,212 @@ class _MenuState extends State<Menu> {
                         topRight: Radius.circular(30))),
         
                 child: Center(
-                  child: Column(
-                    children: [
-                   
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text("Main Menu",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.black),),
-                            Container(
-                              height: 20,
-                              width: 70,
-                              child: Row(
-                                children: [
-                                  Text(
-                                    "Edit Menu",
-                                    style: TextStyle(
-                                        fontSize: 14, color: Colors.green,),
-                                  ),
-                                 
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        
-                      ),
-                     Row(mainAxisAlignment: MainAxisAlignment.start,
+                  child: SingleChildScrollView(scrollDirection: Axis.vertical,
+                    child: Column(
                       children: [
-                  InkWell(onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Transfer()));
-                  },
-                    child: Container(height: 60,width: 60,
+                     
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("Main Menu",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.black),),
+                              Container(
+                                height: 20,
+                                width: 70,
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "Edit Menu",
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.green,),
+                                    ),
+                                   
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          
+                          
+                        ),
+
+                        SizedBox(height: 35,),
+                        
+                       Row(mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                    InkWell(onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => Transfer()));
+                    },
+                      child: Container(height: 60,width: 60,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(
+                        children: [
+                        Icon(Icons.swap_horiz,color: Colors.deepPurple.shade600,),
+                        Text("Transfer")
+                      ],),),
+                    ),
+                    
+                    SizedBox(width: 40,),
+                    
+                    Container(height: 60,width: 60,
                     decoration: BoxDecoration(color: Colors.white),
                     child: Column(
                       children: [
-                      Icon(Icons.swap_horiz,color: Colors.deepPurple.shade600,),
-                      Text("Transfer")
+                      Icon(Icons.account_balance_wallet,color: Colors.deepPurple.shade600,),
+                      Text("Top up")
                     ],),),
-                  ),
-                  
-                  SizedBox(width: 40,),
-                  
-                  Container(height: 60,width: 60,
-                  decoration: BoxDecoration(color: Colors.white),
-                  child: Column(
-                    children: [
-                    Icon(Icons.account_balance_wallet,color: Colors.deepPurple.shade600,),
-                    Text("Top up")
-                  ],),),
-                  
-                  SizedBox(width: 40,),
-                  
-                  Container(height: 65,width: 65,
-                  decoration: BoxDecoration(color: Colors.white),
-                  child: Column(children: [
-                    Icon(Icons.download ,color: Colors.deepPurple.shade600,),
-                    Text("Withdraw")
-                  ],),),
-                  
-                  SizedBox(width: 40,),
-                  
-                  
-                  Container(height: 60,width: 60,
-                  decoration: BoxDecoration(color: Colors.white),
-                  child: Column(children: [
-                    Icon(Icons.download_for_offline_sharp,color: Colors.deepPurple.shade600,),
-                    Text("Request")
-                  ],),)
-                  
-                  
-                     ],),
-                  
-                  Column(
-                    children: [
-                      Text("Payment List",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.black),),
-                   SizedBox(height: 15,),
-                      Row(children: [
-                        Container(height: 65,width: 65,
-                  decoration: BoxDecoration(color: Colors.white),
-                  child: Column(children: [
-                    Icon(Icons.phone_android_outlined ,color: Colors.deepPurple.shade600,),
-                    Text("Pulsa & Data")
-                  ],),),
-                  
-                  SizedBox(width: 40,),
-                  
-                  Container(height: 65,width: 65,
-                  decoration: BoxDecoration(color: Colors.white),
-                  child: Column(children: [
-                    Icon(Icons.electric_bolt_sharp ,color: Colors.deepPurple.shade600,),
-                    Text("Electricity")
-                  ],),),
-                  
-                  SizedBox(width: 40,),
-                  
-                  Container(height: 65,width: 65,
-                  decoration: BoxDecoration(color: Colors.white),
-                  child: Column(children: [
-                    Icon(Icons.airplane_ticket_rounded,color: Colors.deepPurple.shade600,),
-                    Text("Online Ticket")
-                  ],),),
-                  
-                  SizedBox(width: 40,),
-                  
-                  Container(height: 65,width: 65,
-                  decoration: BoxDecoration(color: Colors.white),
-                  child: Column(children: [
-                    Icon(Icons.cast_for_education_outlined ,color: Colors.deepPurple.shade600,),
-                    Text("Education")
-                  ],),),
-                      ],),
-                  
-                      Row(children: [
-                  
-                        Container(height: 65,width: 65,
-                  decoration: BoxDecoration(color: Colors.white),
-                  child: Column(children: [
-                    Icon(Icons.health_and_safety ,color: Colors.deepPurple.shade600,),
-                    Text("Insurance")
-                  ],),),
-                  
-                  SizedBox(width: 40,),
-                  
-                  Container(height: 65,width: 65,
-                  decoration: BoxDecoration(color: Colors.white),
-                  child: Column(children: [
-                    Icon(Icons.signal_cellular_alt ,color: Colors.deepPurple.shade600,),
-                    Text("Invest")
-                  ],),),
-                  
-                  SizedBox(width: 40,),
-                  
-                  Container(height: 65,width: 65,
-                  decoration: BoxDecoration(color: Colors.white),
-                  child: Column(children: [
-                    Icon(Icons.wifi ,color: Colors.deepPurple.shade600,),
-                    Text("Internet and TV Cable")
-                  ],),),
-                  
-                  SizedBox(width: 40,),
-                  
-                  Container(height: 65,width: 65,
-                  decoration: BoxDecoration(color: Colors.white),
-                  child: Column(children: [
-                    Icon(Icons.videogame_asset ,color: Colors.deepPurple.shade600,),
-                    Text("Game voucher")
-                  ],),),
-                      ],)
-                    ],
-                  
                     
-                  )                      ],
+                    SizedBox(width: 40,),
+                    
+                    Container(height: 65,width: 65,
+                    decoration: BoxDecoration(color: Colors.white),
+                    child: Column(children: [
+                      Icon(Icons.download ,color: Colors.deepPurple.shade600,),
+                      Text("Withdraw")
+                    ],),),
+                    
+                    SizedBox(width: 40,),
+                    
+                    
+                    Container(height: 60,width: 60,
+                    decoration: BoxDecoration(color: Colors.white),
+                    child: Column(children: [
+                      Icon(Icons.download_for_offline_sharp,color: Colors.deepPurple.shade600,),
+                      Text("Request")
+                    ],),)
+                    
+                    
+                       ],),
+                    
+                    SizedBox(height: 40,),
+
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Payment List",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.black),),
+                       SizedBox(height: 35,),
+
+                          Row(children: [
+                            Container(height: 65,width: 65,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(children: [
+                        Icon(Icons.phone_android_outlined ,color: Colors.deepPurple.shade600,),
+                        Text("Pulsa & Data")
+                      ],),),
+                      
+                      SizedBox(width: 40,),
+                      
+                      Container(height: 65,width: 65,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(children: [
+                        Icon(Icons.electric_bolt_sharp ,color: Colors.deepPurple.shade600,),
+                        Text("Electricity")
+                      ],),),
+                      
+                      SizedBox(width: 40,),
+                      
+                      Container(height: 65,width: 65,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(children: [
+                        Icon(Icons.airplane_ticket_rounded,color: Colors.deepPurple.shade600,),
+                        Text("Online Ticket")
+                      ],),),
+                      
+                      SizedBox(width: 40,),
+                      
+                      Container(height: 65,width: 65,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(children: [
+                        Icon(Icons.cast_for_education_outlined ,color: Colors.deepPurple.shade600,),
+                        Text("Education")
+                      ],),),
+                          ],),
+                      
+                      SizedBox(height: 15,),
+
+                          Row(children: [
+                      
+                            Container(height: 65,width: 65,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(children: [
+                        Icon(Icons.health_and_safety ,color: Colors.deepPurple.shade600,),
+                        Text("Insurance")
+                      ],),),
+                      
+                      SizedBox(width: 40,),
+                      
+                      Container(height: 65,width: 65,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(children: [
+                        Icon(Icons.signal_cellular_alt ,color: Colors.deepPurple.shade600,),
+                        Text("Invest")
+                      ],),),
+                      
+                      SizedBox(width: 40,),
+                      
+                      Container(height: 85,width: 70,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(children: [
+                        Icon(Icons.wifi ,color: Colors.deepPurple.shade600,),
+                        Text("Internet and TV Cable")
+                      ],),),
+                      
+                      SizedBox(width: 40,),
+                      
+                      Container(height: 85,width: 55,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(children: [
+                        Icon(Icons.videogame_asset ,color: Colors.deepPurple.shade600,),
+                        Text("Game voucher")
+                      ],),),
+                          ],),
+                      
+
+                                            SizedBox(height: 15,),
+
+                           Row(children: [
+                            Container(height: 65,width: 65,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(children: [
+                        Icon(Icons.phone_android_outlined ,color: Colors.deepPurple.shade600,),
+                        Text("E-Money")
+                      ],),),
+                      
+                      SizedBox(width: 30,),
+                      
+                      Container(height: 65,width: 65,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(children: [
+                        Icon(Icons.electric_bolt_sharp ,color: Colors.deepPurple.shade600,),
+                        Text("Water")
+                      ],),),
+                      
+                      SizedBox(width: 30,),
+                      
+                      Container(height: 70,width: 83,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(children: [
+                        Icon(Icons.airplane_ticket_rounded,color: Colors.deepPurple.shade600,),
+                        Text("E-Commerce")
+                      ],),),
+                      
+                      SizedBox(width: 40,),
+                      
+                      Container(height: 65,width: 70,
+                      decoration: BoxDecoration(color: Colors.white),
+                      child: Column(children: [
+                        Icon(Icons.cast_for_education_outlined ,color: Colors.deepPurple.shade600,),
+                        Text("Streaming")
+                      ],),),
+                          ],),
+                        ],
+                      
+                        
+                      ),
+                    )                      ],
+                    ),
                   ),
                   
                 ),
